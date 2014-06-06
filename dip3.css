@@ -130,7 +130,7 @@ html {
 body {
   margin: 1.75em 28px;
 }
-.c, .a, .xxxl {
+.c, .a, .xxxl, .xxxs {
   clear: both;
   text-align: center;
 }
@@ -162,6 +162,11 @@ form div, #level {
   font-weight:bold;
   line-height:1;
   margin:0.7em 0;
+}
+.xxxs {
+  font-size:100%;
+  line-height:1;
+  margin:-5em 0 7em 0;
 }
 .ss {
   float: right;
