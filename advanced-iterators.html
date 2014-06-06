@@ -15,10 +15,10 @@ mark{display:inline}
 
 <p>Jesteś tutaj: <a href=index.html>Start</a><span class=u>&#8227;</span>
     <a href=table-of-contents.html#advanced-iterators>Zanurkuj w Pythonie 3</a>
-    <span class=u>&#8227;</span>
+    <span class=u>&#8227;</span></p>
 
 <p id=level>Poziom trudności: <span class=u title=advanced>
-    &#x2666;&#x2666;&#x2666;&#x2666;&#x2662;</span>
+    &#x2666;&#x2666;&#x2666;&#x2666;&#x2662;</span></p>
 
 <h1>Zaawansowane iteratory</h1>
 
@@ -31,14 +31,12 @@ mark{display:inline}
         A małe pchły mają mniejsze pchły, i tak do nieskończoności)
         <span class=u>&rdquo;</span><br>
         &mdash; Augustus De Morgan
+    </p>
 </blockquote>
 
 <p id=toc>&nbsp;<h2 id=divingin>Nurkujemy</h2>
 
-<p class=f>Tak jak <a href=regular-expressions.html>wyrażenia regularne</a> wstrzykują
-    sterydy <a href=strings.html>napisom</a>, tak moduł
-    <code>itertools</code> wstrzykuje sterydy <a href=iterators.html>iteratorom</a>.
-    Ale najpierw zaprezentuję Wam klasyczne puzzle.
+<p class=f>Tak jak <a href=regular-expressions.html>wyrażenia regularne</a> wstrzykują sterydy <a href=strings.html>napisom</a>, tak moduł <code>itertools</code> wstrzykuje sterydy <a href=iterators.html>iteratorom</a>. Ale najpierw zaprezentuję Wam klasyczne puzzle.</p>
 
 <pre class=nd><code>CZAS + NIE + LATA + WCALE + ALE + LECI == STALE
 9067 + 213 + 4686 + 59643 + 643 + 4391 == 78643
@@ -53,15 +51,15 @@ E = 3
 L = 4
 T = 8
 W = 5</code></pre>
-<i>(zagadka z &bdquo;Wiedza i Życie&rdquo;, sierpień 2000; Marek Penszko, Puzeland)</i>
+<i>(zagadka z czasopisma &bdquo;Wiedza i Życie&rdquo;, sierpień 2000; Marek Penszko, Puzeland)</i>
 
 <p>Tego typu puzzle są zwane <i>alfametykami</i> (odmiana <i>kryptarytmów</i>). Litery układają się w słowa, ale gdy zastąpić każdą literę cyfrą <code>(0&ndash;9)</code>, ułożą się także w równanie arytmetyczne. Zabawa polega na odgadnięciu, która cyfra odpowiada której literze. Takim samym literom powinny odpowiadać takie same cyfry, a różnym literom – różne cyfry. Żadne ze &bdquo;słów&rdquo; nie może zaczynać się zerem.
 
 <aside>Najbardziej znanym alfametykiem jest <code>SEND + MORE = MONEY</code>.</aside>
 
-<p>In this chapter, we&#8217;ll dive into an incredible Python program originally written by Raymond Hettinger. This program solves alphametic puzzles <em>in just 14 lines of code</em>.
+<p>W tym rozdziale zanurkujemy w niesamowitym programie Pythona, który pierwotnie został napisany przez Raymonda Hettingera. Skrypt ten rozwiązuje alfametyczne puzzle jedynie <em>w 14 linijkach kodu</em>.
 
-<p class=d>[<a href=examples/alphametics.py>download <code>alphametics.py</code></a>]
+<p class=d>[<a href=examples/alphametics.py>pobierz <code>alphametics.py</code></a>]
 <pre class=pp><code>import re
 import itertools
 
@@ -90,24 +88,31 @@ if __name__ == '__main__':
         if solution:
             print(solution)</code></pre>
 
-<p>You can run the program from the command line. On Linux, it would look like this. (These may take some time, depending on the speed of your computer, and there is no progress bar. Just be patient!)
+<p>Możesz uruchomić ten program w linii komend. W Linuksie wyglądałoby to mniej więcej tak. (Rozwiązanie poszczególnych łamigłówek zabiera trochę czasu, który zależy również od prędkości Twojego komputera. Nie ma żadnego graficznego paska postępu, zatem uzbrój się w cierpliwość!)</p>
 
 <pre class='nd screen cmdline'>
-<samp class=p>you@localhost:~/diveintopython3/examples$ </samp><kbd>python3 alphametics.py "HAWAII + IDAHO + IOWA + OHIO == STATES"</kbd>
+<samp class=p>you@localhost:~/diveintopython3pl/examples$ </samp><kbd>python3 alphametics.py "HAWAII + IDAHO + IOWA + OHIO == STATES"</kbd>
 <samp>HAWAII + IDAHO + IOWA + OHIO = STATES
 510199 + 98153 + 9301 + 3593 == 621246</samp>
-<samp class=p>you@localhost:~/diveintopython3/examples$ </samp><kbd>python3 alphametics.py "I + LOVE + YOU == DORA"</kbd>
+<samp class=p>you@localhost:~/diveintopython3pl/examples$ </samp><kbd>python3 alphametics.py "I + LOVE + YOU == DORA"</kbd>
 <samp>I + LOVE + YOU == DORA
 1 + 2784 + 975 == 3760</samp>
-<samp class=p>you@localhost:~/diveintopython3/examples$ </samp><kbd>python3 alphametics.py "SEND + MORE == MONEY"</kbd>
+<samp class=p>you@localhost:~/diveintopython3pl/examples$ </samp><kbd>python3 alphametics.py "SEND + MORE == MONEY"</kbd>
 <samp>SEND + MORE == MONEY
-9567 + 1085 == 10652</samp></pre>
+9567 + 1085 == 10652</samp>
+<samp class=p>you@localhost:~/diveintopython3pl/examples$ </samp><kbd>python3 alphametics.py "RAZ + DWA == TRZY"</kbd>
+<samp>SEND + MORE == MONEY
+273 + 957 == 1230</samp>
+<samp class=p>you@localhost:~/diveintopython3pl/examples$ </samp><kbd>python3 alphametics.py "RAZ + DWA + TRZY == SZESC"</kbd>
+<samp>SEND + MORE == MONEY
+360 + 756 + 9302 == 10418</samp>
+</pre>
 
 <p class=a>&#x2042;
 
-<h2 id=re-findall>Finding all occurrences of a pattern</h2>
+<h2 id=re-findall>Znajdowanie wszystkich wystąpień wzoru</h2>
 
-<p>The first thing this alphametics solver does is find all the letters (A&ndash;Z) in the puzzle.
+<p>Pierwszą rzeczą, którą ten skrypt robi, jest znalezienie wszystkich liter (A&ndash;Z) w łamigłówce.
 
 <pre class=screen>
 <samp class=p>>>> </samp><kbd class=pp>import re</kbd>
@@ -116,7 +121,7 @@ if __name__ == '__main__':
 <a><samp class=p>>>> </samp><kbd class=pp>re.findall('[A-Z]+', 'SEND + MORE == MONEY')</kbd>     <span class=u>&#x2461;</span></a>
 <samp class=pp>['SEND', 'MORE', 'MONEY']</samp></pre>
 <ol>
-<li>The <code>re</code> module is Python&#8217;s implementation of <a href=regular-expressions.html>regular expressions</a>. It has a nifty function called <code>findall()</code> which takes a regular expression pattern and a string, and finds all occurrences of the pattern within the string. In this case, the pattern matches sequences of numbers. The <code>findall()</code> function returns a list of all the substrings that matched the pattern.
+<li>Moduł <code>re</code> jest Pythonową implementacją <a href=regular-expressions.html>wyrażeń regularnych</a>. It has a nifty function called <code>findall()</code> which takes a regular expression pattern and a string, and finds all occurrences of the pattern within the string. In this case, the pattern matches sequences of numbers. The <code>findall()</code> function returns a list of all the substrings that matched the pattern.
 <li>Here the regular expression pattern matches sequences of letters. Again, the return value is a list, and each item in the list is a string that matched the regular expression pattern.
 </ol>
 
@@ -126,7 +131,7 @@ if __name__ == '__main__':
 <samp class=p>>>> </samp><kbd class=pp>re.findall(' s.*? s', "The sixth sick sheikh's sixth sheep's sick.")</kbd>
 <samp class=pp>[' sixth s', " sheikh's s", " sheep's s"]</samp></pre>
 
-<aside>This is the <a href=http://en.wikipedia.org/wiki/Tongue-twister>hardest tongue twister</a> in the English language.</aside>
+<aside>Jest to <a href=http://pl.wikiquote.org/wiki/Łamańce_językowe>najtrudniejszy łamaniec językowy</a> w języku angielskim.</aside>
 
 <p>Surprised? The regular expression looks for a space, an <code>s</code>, and then the shortest possible series of any character (<code>.*?</code>), then a space, then another <code>s</code>. Well, looking at that input string, I see five matches:
 
@@ -546,14 +551,15 @@ for guess in itertools.permutations(digits, len(characters)):
 <p>It&#8217;s even worse than that, because there&#8217;s a global <code>__import__()</code> function that takes a module name as a string, imports the module, and returns a reference to it. Combined with the power of <code>eval()</code>, you can construct a single expression that will wipe out all your files:
 
 <pre class=screen>
-<a><samp class=p>>>> </samp><kbd class=pp>eval("__import__('subprocess').getoutput('rm /some/random/file')")</kbd>  <span class=u>&#x2460;</span></a></pre>
+<a><samp class=p>>>> </samp><kbd class=pp>eval("__import__('subprocess').getoutput('rm /jakis/przypadkowy/plik')")</kbd>  <span class=u>&#x2460;</span></a></pre>
 <ol>
-<li>Now imagine the output of <code>'rm -rf ~'</code>. Actually there wouldn&#8217;t be any output, but you wouldn&#8217;t have any files left either.
+<li>A teraz wyobraź sobie wynik działania <code>'rm -rf ~'</code>. Właściwie nie byłoby żadnego wyniku, ale z plików na dysku też wiele by nie zostało.
 </ol>
 
-<p class=xxxl>eval() is EVIL
+<p class=xxxl>eval() is EVIL</p>
+<p class=xxxs><i>&bdquo;eval() to ZŁO&rdquo; (ang. gra słów)</i></p>
 
-<p>Well, the evil part is evaluating arbitrary expressions from untrusted sources. You should only use <code>eval()</code> on trusted input. Of course, the trick is figuring out what&#8217;s &#8220;trusted.&#8221; But here&#8217;s something I know for certain: you should <b>NOT</b> take this alphametics solver and put it on the internet as a fun little web service. Don&#8217;t make the mistake of thinking, &#8220;Gosh, the function does a lot of string manipulation before getting a string to evaluate; <em>I can&#8217;t imagine</em> how someone could exploit that.&#8221; Someone <b>WILL</b> figure out how to sneak nasty executable code past all that string manipulation (<a href=http://www.securityfocus.com/blogs/746>stranger things have happened</a>), and then you can kiss your server goodbye.
+<p>Cóż, ta zła część to wykonywanie arbitralnych wyrażeń z niezaufanych źródeł. Używaj <code>eval()</code> jedynie dla zaufanych danych wejściowych. Of course, the trick is figuring out what&#8217;s &#8220;trusted.&#8221; But here&#8217;s something I know for certain: you should <b>NOT</b> take this alphametics solver and put it on the internet as a fun little web service. Don&#8217;t make the mistake of thinking, &#8220;Gosh, the function does a lot of string manipulation before getting a string to evaluate; <em>I can&#8217;t imagine</em> how someone could exploit that.&#8221; Someone <b>WILL</b> figure out how to sneak nasty executable code past all that string manipulation (<a href=http://www.securityfocus.com/blogs/746>stranger things have happened</a>), and then you can kiss your server goodbye.
 
 <p>But surely there&#8217;s <em>some</em> way to evaluate expressions safely? To put <code>eval()</code> in a sandbox where it can&#8217;t access or harm the outside world? Well, yes and no.
 
