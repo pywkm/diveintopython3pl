@@ -1,0 +1,8 @@
+syntax: glob
+*.pyc
+build
+grid28.gif
+copyedit
+proofs
+.idea
+examples/__pycache__
