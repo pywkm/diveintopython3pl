@@ -1,6 +1,6 @@
 /*
 
-"Dive Into Python 3" stylesheet
+"Zanurkuj w Pythonie 3" stylesheet
 
 Copyright (c) 2009, Mark Pilgrim, All rights reserved.
 
@@ -301,7 +301,7 @@ h1 {
   counter-reset: h2;
 }
 h1:before {
-  content: "Chapter " counter(h1) ". ";
+  content: "Rozdział " counter(h1) ". ";
 }
 h2:before {
   counter-increment: h2;

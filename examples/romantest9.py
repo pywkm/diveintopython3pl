@@ -1,6 +1,6 @@
 '''Unit test for roman1.py
 
-This program is part of 'Dive Into Python 3', a free Python book for
+This program is part of 'Zanurkuj w Pythonie 3', a free Python book for
 experienced programmers.  Visit http://diveintopython3.org/ for the
 latest version.
 '''

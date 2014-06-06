@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <meta charset=utf-8>
-<title>Serializing Python Objects - Dive Into Python 3</title>
+<title>Serializing Python Objects - Zanurkuj w Pythonie 3</title>
 <!--[if IE]><script src=j/html5.js></script><![endif]-->
 <link rel=stylesheet href=dip3.css>
 <style>
@@ -10,14 +10,14 @@ body{counter-reset:h1 13}
 <link rel=stylesheet media=print href=print.css>
 <meta name=viewport content='initial-scale=1.0'>
 <form action=http://www.google.com/cse><div><input type=hidden name=cx value=014021643941856155761:l5eihuescdw><input type=hidden name=ie value=UTF-8>&nbsp;<input type=search name=q size=25 placeholder="powered by Google&trade;">&nbsp;<input type=submit name=root value=Search></div></form>
-<p>You are here: <a href=index.html>Home</a> <span class=u>&#8227;</span> <a href=table-of-contents.html#serializing>Dive Into Python 3</a> <span class=u>&#8227;</span>
-<p id=level>Difficulty level: <span class=u title=advanced>&#x2666;&#x2666;&#x2666;&#x2666;&#x2662;</span>
+<p>Jesteś tutaj: <a href=index.html>Start</a> <span class=u>&#8227;</span> <a href=table-of-contents.html#serializing>Zanurkuj w Pythonie 3</a> <span class=u>&#8227;</span>
+<p id=level>Poziom trudności: <span class=u title=advanced>&#x2666;&#x2666;&#x2666;&#x2666;&#x2662;</span>
 <h1>Serializing Python Objects</h1>
 <blockquote class=q>
 <p><span class=u>&#x275D;</span> Every Saturday since we&#8217;ve lived in this apartment, I have awakened at 6:15, poured myself a bowl of cereal, added<br>a quarter-cup of 2% milk, sat on <strong>this</strong> end of <strong>this</strong> couch, turned on BBC America, and watched Doctor Who. <span class=u>&#x275E;</span><br>&mdash; Sheldon, <a href='http://en.wikiquote.org/wiki/The_Big_Bang_Theory#The_Dumpling_Paradox_.5B1.07.5D'>The Big Bang Theory</a>
 </blockquote>
 <p id=toc>&nbsp;
-<h2 id=divingin>Diving In</h2>
+<h2 id=divingin>Nurkujemy</h2>
 <p class=f>On the surface, the concept of <dfn>serialization</dfn> is simple. You have a data structure in memory that you want to save, reuse, or send to someone else. How would you do that? Well, that depends on how you want to save it, how you want to reuse it, and to whom you want to send it. Many games allow you to save your progress when you quit the game and pick up where you left off when you relaunch the game. (Actually, many non-gaming applications do this as well.) In this case, a data structure that captures &#8220;your progress so far&#8221; needs to be stored on disk when you quit, then loaded from disk when you relaunch. The data is only meant to be used by the same program that created it, never sent over a network, and never read by anything other than the program that created it. Therefore, the interoperability issues are limited to ensuring that later versions of the program can read data written by earlier versions.
 
 <p>For cases like this, the <code>pickle</code> module is ideal. It&#8217;s part of the Python standard library, so it&#8217;s always available. It&#8217;s fast; the bulk of it is written in C, like the Python interpreter itself. It can store arbitrarily complex Python data structures.
@@ -655,7 +655,8 @@ NameError: name 'entry' is not defined</samp>
 </ul>
 
 <p class=v><a rel=prev href=xml.html title='back to &#8220;XML&#8221;'><span class=u>&#x261C;</span></a> <a rel=next href=http-web-services.html title='onward to &#8220;HTTP Web Services&#8221;'><span class=u>&#x261E;</span></a>
-<p class=c>&copy; 2001&ndash;11 <a href=about.html>Mark Pilgrim</a>
+<p class=c>&copy; 2001&ndash;14 <a href=about.html>Mark Pilgrim</a>
+    <br>&copy; 2014 (polska wersja) <a href=about.html>Wiktor Matuszewski</a>
 <script src=j/jquery.js></script>
 <script src=j/prettify.js></script>
 <script src=j/dip3.js></script>
