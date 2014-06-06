@@ -32,6 +32,7 @@ http://www.alanwood.net/unicode/dingbats.html
 &#x25C9; - fisheye
 &#x2365; - APL FUNCTIONAL SYMBOL CIRCLE DIAERESIS
 &#x203B; - reference mark
+&bdquo; &rdquo;	- Polski cudzysłów apostrofowy
 
 http://docs.python.org/dev/library/turtle.html
 http://svn.python.org/projects/python/trunk/Demo/turtle/
