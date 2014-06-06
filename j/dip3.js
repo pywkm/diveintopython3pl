@@ -88,7 +88,7 @@ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 */
 
-var HS = {'visible': 'hide', 'hidden': 'show'};
+var HS = {'visible': 'ukryj', 'hidden': 'pokaż'};
 
 function hideTOC() {
     var toc = '<span class="nm u">&#8227;</span> <a href="javascript:showTOC()">pokaż spis treści</a>';
@@ -141,7 +141,7 @@ $(document).ready(function() {
 
 		/* wrap code block in a div and insert widget block */
 		$(this).wrapInner('<div class=b></div>');
-		var widgetHTML = '<div class=w>[<a class=toggle href="javascript:toggleCodeBlock(\'' + this.id + '\')">' + HS.visible + '</a>] [<a href="javascript:plainTextOnClick(\'' + this.id + '\')">open in new window</a>]';
+		var widgetHTML = '<div class=w>[<a class=toggle href="javascript:toggleCodeBlock(\'' + this.id + '\')">' + HS.visible + '</a>] [<a href="javascript:plainTextOnClick(\'' + this.id + '\')">otwórz w nowym oknie</a>]';
 		if ($(this).hasClass('cmdline')) {
 		    widgetHTML += ' [<a href="troubleshooting.html#getting-to-the-command-line">command line help</a>]';
 		}
