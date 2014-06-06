@@ -51,9 +51,10 @@
 
 <pre class='nd screen cmdline'>
 <samp class=p>mark@atlantis:~$ </samp><kbd>python3</kbd>
-<samp>Python 3.1 (r31:73572, Jul 28 2009, 06:52:23) [GCC 4.2.4 (Ubuntu
-    4.2.4-1ubuntu4)] on linux2 Type "help", "copyright", "credits" or "license"
-    for more information. >>></samp></pre>
+<samp>Python 3.1 (r31:73572, Jul 28 2009, 06:52:23)
+[GCC 4.2.4 (Ubuntu 4.2.4-1ubuntu4)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>></samp></pre>
 
 <p>(Type <kbd>exit()</kbd> and press <kbd>ENTER</kbd> to exit the Python
     interactive shell.)
@@ -637,120 +638,80 @@
 
 <pre class='nd screen'>
 <samp class=p>>>> </samp><kbd>help</kbd>
-<samp>Type help() for interactive help, or help(object) for help about
-    object.</samp></pre>
+<samp>Type help() for interactive help, or help(object) for help about object.</samp></pre>
 
-<p>There are two modes of help. You can get help about a single object, which
-    just prints out the documentation and returns you to the Python Shell
-    prompt. You can also enter <i>help mode</i>, where instead of evaluating
-    Python expressions, you just type keywords or command names and it will
-    print out whatever it knows about that command.
+<p>There are two modes of help. You can get help about a single object, which just prints out the documentation and returns you to the Python Shell prompt. You can also enter <i>help mode</i>, where instead of evaluating Python expressions, you just type keywords or command names and it will print out whatever it knows about that command.
 
 <p>To enter the interactive help mode, type <kbd>help()</kbd> and press <kbd>ENTER</kbd>.
 
 <pre class='nd screen'>
 <samp class=p>>>> </samp><kbd class=pp>help()</kbd>
-<samp>Welcome to Python 3.0! This is the online help utility.
+<samp>Welcome to Python 3.0!  This is the online help utility.
 
-    If this is your first time using Python, you should definitely check out
-    the tutorial on the Internet at http://docs.python.org/tutorial/.
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at http://docs.python.org/tutorial/.
 
-    Enter the name of any module, keyword, or topic to get help on writing
-    Python programs and using Python modules. To quit this help utility and
-    return to the interpreter, just type "quit".
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
 
-    To get a list of available modules, keywords, or topics, type "modules",
-    "keywords", or "topics". Each module also comes with a one-line summary of
-    what it does; to list the modules whose summaries contain a given word such
-    as "spam", type "modules spam". </samp>
+To get a list of available modules, keywords, or topics, type "modules",
+"keywords", or "topics".  Each module also comes with a one-line summary
+of what it does; to list the modules whose summaries contain a given word
+such as "spam", type "modules spam".
+</samp>
 <samp class=p>help> </samp></pre>
 
-<p>Note how the prompt changes from <samp class=p>>>></samp> to <samp class=p>help></samp>.
-    This reminds you that you&#8217;re in the interactive help mode. Now you
-    can enter any keyword, command, module name, function name&nbsp;&mdash;&nbsp;pretty
-    much anything Python understands&nbsp;&mdash;&nbsp;and read documentation
-    on it.
+<p>Note how the prompt changes from <samp class=p>>>></samp> to <samp class=p>help></samp>. This reminds you that you&#8217;re in the interactive help mode. Now you can enter any keyword, command, module name, function name&nbsp;&mdash;&nbsp;pretty much anything Python understands&nbsp;&mdash;&nbsp;and read documentation on it.
 
 <pre class=screen>
-<a><samp class=p>help> </samp><kbd class=pp>print</kbd>
-    <span class=u>&#x2460;</span></a>
+<a><samp class=p>help> </samp><kbd class=pp>print</kbd>                                                                 <span class=u>&#x2460;</span></a>
 <samp>Help on built-in function print in module builtins:
 
-    print(...) print(value, ..., sep=' ', end='\n', file=sys.stdout)
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout)
 
-    Prints the values to a stream, or to sys.stdout by default. Optional
-    keyword arguments: file: a file-like object (stream); defaults to the
-    current sys.stdout. sep: string inserted between values, default a space.
-    end: string appended after the last value, default a newline. </samp>
-<a><samp class=p>help> </samp><kbd class=pp>PapayaWhip</kbd> <span class=u>&#x2461;</span></a>
-<samp>no Python documentation found for 'PapayaWhip' </samp>
-<a><samp class=p>help> </samp><kbd class=pp>quit</kbd>
-    <span class=u>&#x2462;</span></a>
-<samp> You are now leaving help and returning to the Python interpreter. If you
-    want to ask for help on a particular object directly from the interpreter,
-    you can type "help(object)". Executing "help('string')" has the same effect
-    as typing a particular string at the help> prompt.</samp>
-<a><samp class=p>>>> </samp> <span class=u>&#x2463;</span></a></pre>
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file: a file-like object (stream); defaults to the current sys.stdout.
+    sep:  string inserted between values, default a space.
+    end:  string appended after the last value, default a newline.
+</samp>
+<a><samp class=p>help> </samp><kbd class=pp>PapayaWhip</kbd>                                                            <span class=u>&#x2461;</span></a>
+<samp>no Python documentation found for 'PapayaWhip'
+</samp>
+<a><samp class=p>help> </samp><kbd class=pp>quit</kbd>                                                                  <span class=u>&#x2462;</span></a>
+<samp>
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.</samp>
+<a><samp class=p>>>> </samp>                                                                        <span class=u>&#x2463;</span></a></pre>
 <ol>
-    <li>To get documentation on the <code>print()</code> function, just type
-        <kbd>print</kbd> and press <kbd>ENTER</kbd>. The interactive help mode
-        will display something akin to a man page: the function name, a brief
-        synopsis, the function&#8217;s arguments and their default values, and
-        so on. If the documentation seems opaque to you, don&#8217;t panic. You&#8217;ll
-        learn more about all these concepts in the next few chapters.
-    <li>Of course, the interactive help mode doesn&#8217;t know everything. If
-        you type something that isn&#8217;t a Python command, module, function,
-        or other built-in keyword, the interactive help mode will just shrug
-        its virtual shoulders.
-    <li>To quit the interactive help mode, type <kbd>quit</kbd> and press <kbd>ENTER</kbd>.
-    <li>The prompt changes back to <samp class=p>>>></samp> to signal that you&#8217;ve
-        left the interactive help mode and returned to the Python Shell.
+<li>To get documentation on the <code>print()</code> function, just type <kbd>print</kbd> and press <kbd>ENTER</kbd>. The interactive help mode will display something akin to a man page: the function name, a brief synopsis, the function&#8217;s arguments and their default values, and so on. If the documentation seems opaque to you, don&#8217;t panic. You&#8217;ll learn more about all these concepts in the next few chapters.
+<li>Of course, the interactive help mode doesn&#8217;t know everything. If you type something that isn&#8217;t a Python command, module, function, or other built-in keyword, the interactive help mode will just shrug its virtual shoulders.
+<li>To quit the interactive help mode, type <kbd>quit</kbd> and press <kbd>ENTER</kbd>.
+<li>The prompt changes back to <samp class=p>>>></samp> to signal that you&#8217;ve left the interactive help mode and returned to the Python Shell.
 </ol>
 
-<p><abbr>IDLE</abbr>, the graphical Python Shell, also includes a Python-aware
-    text editor.
+<p><abbr>IDLE</abbr>, the graphical Python Shell, also includes a Python-aware text editor.
 
 <p class=a>&#x2042;
 
 <h2 id=editors>Python Editors and IDEs</h2>
 
-<p><abbr>IDLE</abbr> is not the only game in town when it comes to writing
-    programs in Python. While it&#8217;s useful to get started with learning
-    the language itself, many developers prefer other text editors or
-    Integrated Development Environments (<abbr>IDE</abbr>s). I won&#8217;t
-    cover them here, but the Python community maintains
-    <a href=http://wiki.python.org/moin/PythonEditors>a list of Python-aware
-        editors</a> that covers a wide range of supported platforms and
-    software licenses.
+<p><abbr>IDLE</abbr> is not the only game in town when it comes to writing programs in Python. While it&#8217;s useful to get started with learning the language itself, many developers prefer other text editors or Integrated Development Environments (<abbr>IDE</abbr>s). I won&#8217;t cover them here, but the Python community maintains <a href=http://wiki.python.org/moin/PythonEditors>a list of Python-aware editors</a> that covers a wide range of supported platforms and software licenses.
 
-<p>You might also want to check out the
-    <a href=http://wiki.python.org/moin/IntegratedDevelopmentEnvironments>list
-        of Python-aware <abbr>IDE</abbr>s</a>, although few of them support
-    Python 3 yet. One that does is
-    <a href=http://pydev.sourceforge.net/>PyDev</a>, a plugin for
-    <a href=http://eclipse.org/>Eclipse</a> that turns Eclipse into a
-    full-fledged Python <abbr>IDE</abbr>. Both Eclipse and PyDev are
-    cross-platform and open source.
+<p>You might also want to check out the <a href=http://wiki.python.org/moin/IntegratedDevelopmentEnvironments>list of Python-aware <abbr>IDE</abbr>s</a>, although few of them support Python 3 yet. One that does is <a href=http://pydev.sourceforge.net/>PyDev</a>, a plugin for <a href=http://eclipse.org/>Eclipse</a> that turns Eclipse into a full-fledged Python <abbr>IDE</abbr>. Both Eclipse and PyDev are cross-platform and open source.
 
-<p>On the commercial front, there is ActiveState&#8217;s
-    <a href=http://www.activestate.com/komodo/>Komodo <abbr>IDE</abbr></a>. It
-    has per-user licensing, but students can get a discount, and a free
-    time-limited trial version is available.
+<p>On the commercial front, there is ActiveState&#8217;s <a href=http://www.activestate.com/komodo/>Komodo <abbr>IDE</abbr></a>. It has per-user licensing, but students can get a discount, and a free time-limited trial version is available.
 
-<p>I&#8217;ve been programming in Python for nine years, and I edit my Python
-    programs in <a href=http://www.gnu.org/software/emacs/>GNU Emacs</a> and
-    debug them in the command-line Python Shell. There&#8217;s no right or
-    wrong way to develop in Python. Find a way that works for you!
+<p>I&#8217;ve been programming in Python for nine years, and I edit my Python programs in <a href=http://www.gnu.org/software/emacs/>GNU Emacs</a> and debug them in the command-line Python Shell. There&#8217;s no right or wrong way to develop in Python. Find a way that works for you!
 
-<p class=v><a href=whats-new.html
-        rel=prev
-        title='back to &#8220;What&#8217;s New In Zanurkuj w Pythonie 3&#8221;'><span
-        class=u>&#x261C;</span></a> <a href=your-first-python-program.html
-        rel=next
-        title='onward to &#8220;Your First Python Program&#8221;'><span class=u>&#x261E;</span></a>
+<p class=v><a href=whats-new.html rel=prev title='back to &#8220;What&#8217;s New In Dive Into Python 3&#8221;'><span class=u>&#x261C;</span></a> <a href=your-first-python-program.html rel=next title='onward to &#8220;Your First Python Program&#8221;'><span class=u>&#x261E;</span></a>
 
 <p class=c>&copy; 2001&ndash;14 <a href=about.html>Mark Pilgrim</a> <br>&copy;
     2014 (polska wersja) <a href=about.html>Wiktor Matuszewski</a>
-    <script src=j/jquery.js></script>
-    <script src=j/prettify.js></script>
-    <script src=j/dip3.js></script>
+<script src=j/jquery.js></script>
+<script src=j/prettify.js></script>
+<script src=j/dip3.js></script>
